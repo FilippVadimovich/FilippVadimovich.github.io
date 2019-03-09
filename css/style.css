@@ -1,12 +1,4 @@
-html,
-body {
-    width: 1920px;
-    height: 100%;
-    margin: 0 auto;
-
-}
-
-@font-face {
+﻿@font-face {
     font-family: raleway;
     src: url(../fonts/raleway/raleway-bold.ttf);
     src: url(../fonts/raleway/raleway-extrabold.ttf);
@@ -28,6 +20,7 @@ body {
 }
 
 .container {
+width: 1920px;
     box-sizing: border-box;
 }
 
