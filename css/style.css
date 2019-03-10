@@ -22,6 +22,7 @@
 .container {
     width: 1920px;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .main_header {
@@ -29,7 +30,6 @@
     background: url(../img/header.jpg) #454340 no-repeat;
     background-size: cover;
     padding-top: 40px;
-    position: relative;
 }
 
 logo:hover logo_menu {
@@ -41,11 +41,9 @@ logo:hover logo_menu {
     filter: brightness(80%);
 }
 
-
 .logo {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     /*    width: 181px;*/
     text-decoration: none;
 }
@@ -65,7 +63,6 @@ logo:hover logo_menu {
 
 .logo:active .logo_svg {
     fill: #c7b299;
-
 }
 
 .logo:active .logo_txt {
@@ -91,12 +88,13 @@ logo:hover logo_menu {
 .navigation {
     position: relative;
 }
+
 .menu {
     display: flex;
     flex-wrap: nowrap;
 }
+
 .menu li {
-   
     list-style-type: none;
 }
 
@@ -112,7 +110,6 @@ logo:hover logo_menu {
 
 .menu a:hover {
     color: #c7b29a;
-
 }
 
 .search_icon {
@@ -153,7 +150,6 @@ logo:hover logo_menu {
     width: 40px;
     height: 73px;
     position: relative;
-
 }
 
 .slider_arrow_left:after {
@@ -384,7 +380,6 @@ logo:hover logo_menu {
     line-height: 28px;
     text-align: center;
     margin: 0 auto;
-
 }
 
 .ideas_background .first {
@@ -459,7 +454,6 @@ logo:hover logo_menu {
     border-bottom: 3px solid #736356;
     margin-top: 50px;
     margin-right: 374px;
-
 }
 
 .purchase_button:hover {
@@ -605,14 +599,9 @@ logo:hover logo_menu {
     background: #362f2d;
 }
 
-
 .projects img:hover {
     transition: .5s ease-in-out;
     opacity: 0.5;
-}
-
-.projects_box: hover .link_on_img {
-    display: block;
 }
 
 .projects_box span {
@@ -629,7 +618,6 @@ logo:hover logo_menu {
 .projects_box span:hover {
     color: #ffffff;
 }
-
 
 .projects_box span + span {
     font-family: Montserrat;
@@ -660,7 +648,6 @@ logo:hover logo_menu {
     line-height: 50px;
     text-align: center;
     margin: 40px auto 80px;
-
 }
 
 .projects .load_btn:hover {
@@ -719,14 +706,20 @@ logo:hover logo_menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
+}
+
+.iphone_in_hand {
+    margin: 79px 0 0 423px;
 }
 
 .for_mobile_description {
     width: 50%;
-
+    margin-top: 195px;
 }
 
 .for_mobile_description ul li {
+    margin-left: 100px;
     list-style-type: none;
     color: #8c8c8c;
     font-family: Montserrat;
@@ -744,25 +737,24 @@ logo:hover logo_menu {
     left: -30px;
     width: 21px;
     height: 21px;
-
 }
 
 .for_mobile span {
-    display: block;
     font-family: Raleway;
     color: #555555;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
     text-align: center;
 }
 
 .for_mobile p {
+    width: 657px;
     font-family: Montserrat;
     color: #8c8c8c;
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
-    text-align: left;
+    margin: 40px 0;
 }
 
 .counters {
@@ -774,7 +766,6 @@ logo:hover logo_menu {
     background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%);
     background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
 }
-
 
 .counters_content {
     width: 137px;
@@ -799,7 +790,6 @@ logo:hover logo_menu {
     line-height: 36px;
     text-align: center;
     margin: 31px 0 30px 0;
-
 }
 
 .counters_content .counters_txt {
@@ -1043,7 +1033,6 @@ label,
 
 input[type="checkbox"]:checked ~ .menu {
     visibility: visible;
-  
 }
 
 @media screen and (max-width: 605px) {
@@ -1052,10 +1041,12 @@ input[type="checkbox"]:checked ~ .menu {
         padding: 0 0;
         width: 600px;
     }
+
     .logo_menu {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
+
     .logo_menu {
         width: 600px;
         padding: 0 0 50px 0;
@@ -1066,25 +1057,28 @@ input[type="checkbox"]:checked ~ .menu {
         display: none;
     }
 
+    .navigation {
+        justify-content: space-between;
+        width: 100%;
+    }
+
     label {
         display: flex;
-        align-content: flex-end;
         width: 50px;
         height: 50px;
         background-image: url(../img/burgermenu.png.png);
-      
+        position: absolute;
+        top: -10px;
+        right: 250px;
     }
-    .navigation {
-       justify-content: space-between;
-       width: 100%; 
-    }
+
     .menu {
         visibility: hidden;
         margin: 0 0;
         height: auto;
         width: 600px;
         flex-direction: column;
-        
+        align-items: flex-start;
     }
 
     .menu li {
@@ -1115,7 +1109,6 @@ input[type="checkbox"]:checked ~ .menu {
         width: 200px;
     }
 
-
     .aside_class {
         width: 600px;
         display: flex;
@@ -1131,12 +1124,10 @@ input[type="checkbox"]:checked ~ .menu {
         font-size: 28px;
         font-weight: 400;
         margin: 50px 10px;
-
     }
 
     .aside_class p {
         display: none;
-
     }
 
     .purchase_button {
@@ -1175,9 +1166,7 @@ input[type="checkbox"]:checked ~ .menu {
         width: 600px;
         height: 350px;
         object-fit: inherit;
-
     }
-
 
     .video_presentation_describtion {
         display: flex;
@@ -1213,32 +1202,42 @@ input[type="checkbox"]:checked ~ .menu {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin: 0;
     }
 
-    .for_mobile .iphone_in_hand {
-        width: 239px;
-        order: 2;
+    .iphone_in_hand {
+        margin: 0;
     }
 
-    .for_mobile img {
-        width: 210px;
-        height: 303px;
-
+    .iphone_in_hand img {
+        width: 300px;
+        height: 500px;
     }
 
     .for_mobile_description {
-        display: flex;
-        width: 600px;
-
+        margin: 0;
     }
 
-    .for_mobile_list {
-        width: 300px;
-        order: 3;
+    .for_mobile_description ul li {
+        margin: 0;
     }
 
     .for_mobile span {
-        width: 100%: font-size: 44px;
+        font-family: Raleway;
+        color: #555555;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .for_mobile p {
+        width: 300px;
+        font-family: Montserrat;
+        color: #8c8c8c;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        margin: 40px 0;
     }
 
     .counters {
@@ -1252,7 +1251,6 @@ input[type="checkbox"]:checked ~ .menu {
     .footer_logos_logos {
         width: 110px;
         height: 90px;
-
     }
 
     .footer_section_first,
