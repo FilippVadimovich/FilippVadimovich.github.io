@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
     font-family: raleway;
     src: url(../fonts/raleway/raleway-bold.ttf);
     src: url(../fonts/raleway/raleway-extrabold.ttf);
@@ -20,7 +20,7 @@
 }
 
 .container {
-width: 1920px;
+    width: 1920px;
     box-sizing: border-box;
 }
 
@@ -29,6 +29,7 @@ width: 1920px;
     background: url(../img/header.jpg) #454340 no-repeat;
     background-size: cover;
     padding-top: 40px;
+    position: relative;
 }
 
 logo:hover logo_menu {
@@ -87,12 +88,15 @@ logo:hover logo_menu {
     justify-content: space-between;
 }
 
-.menu {
+.navigation {
     position: relative;
 }
-
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+}
 .menu li {
-    float: left;
+   
     list-style-type: none;
 }
 
@@ -1033,47 +1037,59 @@ footer time {
 }
 
 label,
-#mennu {
+#label_menu {
     display: none;
 }
 
-#mennu:checked ~ .menu ul {
-    display: flex;
-    background-color: none;
+input[type="checkbox"]:checked ~ .menu {
+    visibility: visible;
+  
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 605px) {
     .container {
         margin: 0 0;
         padding: 0 0;
         width: 600px;
     }
-
+    .logo_menu {
+        display: flex;
+        justify-content: center;
+    }
     .logo_menu {
         width: 600px;
         padding: 0 0 50px 0;
     }
 
-    .menu {
+    .navigation form,
+    .navigation .cart {
         display: none;
     }
 
     label {
-        display: block;
+        display: flex;
+        align-content: flex-end;
         width: 50px;
         height: 50px;
-        background-image: url(../img/butger.png);
-        background-size: 100%;
+        background-image: url(../img/burgermenu.png.png);
+      
     }
-
+    .navigation {
+       justify-content: space-between;
+       width: 100%; 
+    }
     .menu {
+        visibility: hidden;
+        margin: 0 0;
+        height: auto;
+        width: 600px;
         flex-direction: column;
+        
     }
 
     .menu li {
         height: 40px;
         text-align: center;
-        margin-top: 2px;
     }
 
     .slider_arrow_left,
@@ -1196,32 +1212,33 @@ label,
     .for_mobile {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column-reverse;
         justify-content: center;
     }
 
     .for_mobile .iphone_in_hand {
-        align-self: flex-start;
+        width: 239px;
+        order: 2;
     }
 
     .for_mobile img {
         width: 210px;
         height: 303px;
+
     }
 
     .for_mobile_description {
+        display: flex;
         width: 600px;
 
     }
 
     .for_mobile_list {
         width: 300px;
-        align-self: flex-end;
+        order: 3;
     }
 
     .for_mobile span {
-
-        font-size: 44px;
+        width: 100%: font-size: 44px;
     }
 
     .counters {
