@@ -44,7 +44,7 @@ logo:hover logo_menu {
 .logo {
     display: flex;
     justify-content: space-between;
-    /*    width: 181px;*/
+    width: 185px;
     text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ logo:hover logo_menu {
     font-size: 34px;
     font-weight: 400;
     text-align: right;
-    line-height: 34px;
+    line-height: 56px;
 }
 
 .logo_menu {
@@ -1037,9 +1037,10 @@ input[type="checkbox"]:checked ~ .menu {
 
 @media screen and (max-width: 605px) {
     .container {
-        margin: 0 0;
-        padding: 0 0;
+        margin: 0;
+        padding: 0;
         width: 600px;
+        overflow-x: hidden;
     }
 
     .logo_menu {
@@ -1049,7 +1050,7 @@ input[type="checkbox"]:checked ~ .menu {
 
     .logo_menu {
         width: 600px;
-        padding: 0 0 50px 0;
+        padding: 5px;
     }
 
     .navigation form,
